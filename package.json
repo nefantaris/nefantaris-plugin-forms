@@ -1,0 +1,27 @@
+{
+    "name": "@nefantaris/plugin-forms",
+    "version": "0.0.0",
+    "description": "Contact forms for Nefantaris sites, delivered via notification URLs",
+    "license": "MIT",
+    "author": "Adam Sturge",
+    "homepage": "https://github.com/nefantaris/nefantaris-plugin-forms#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nefantaris/nefantaris-plugin-forms.git"
+    },
+    "bugs": {
+        "url": "https://github.com/nefantaris/nefantaris-plugin-forms/issues"
+    },
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "typecheck": "tsc --noEmit",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "devDependencies": {
+        "@types/node": "26.3.0",
+        "prettier": "3.9.6",
+        "typescript": "7.0.2"
+    }
+}
