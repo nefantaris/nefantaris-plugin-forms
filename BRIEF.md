@@ -2,7 +2,7 @@
 
 ## Mission
 
-The first plugin, and the template for all future ones. Gives brochure sites the one dynamic thing they actually need — a contact form — without a server, and proves the plugin contract (directive + build hook + Pages Function) end to end.
+Gives brochure sites the one dynamic thing they actually need — a contact form — without a server. `nefantaris-plugin-date-fns` already proves the dependency half of the plugin contract; this one is the template for every plugin that ships behaviour, and proves the half core declares but does not yet consume: a directive and a Pages Function reaching a build.
 
 ## v1 scope
 
@@ -21,8 +21,8 @@ The first plugin, and the template for all future ones. Gives brochure sites the
 
 - Spam protection: Cloudflare Turnstile fits the stack — required or optional?
 - Email delivery mechanism when someone insists on email (provider API vs Workers-compatible SMTP service)
-- Exactly how a plugin declares its function so nefantaris-core deploys it — this decision becomes the plugin spec
+- How a plugin declares itself is settled: `plugin.json`, per [THEME-CONTRACT.md](../THEME-CONTRACT.md). What is open is how core _consumes_ `provides.directives` and `provides.functions` — how a plugin directive becomes reachable from markdown alongside the theme's own, and how `functions/` gets deployed with the site
 
 ## Layout
 
-`src/notify` (URL router + services), `src/directive` (form component + registration), `functions/` (Pages Function template).
+`plugin.json` (the manifest), `src/notify` (URL router + services), `src/directive` (form component), `functions/` (Pages Function template).

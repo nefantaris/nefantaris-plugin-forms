@@ -1,0 +1,10 @@
+{
+    "name": "nefantaris-plugin-forms",
+    "contract": 1,
+    "provides": {
+        "directives": {
+            "contact-form": "src/directive/index.ts"
+        },
+        "functions": "functions/"
+    }
+}
